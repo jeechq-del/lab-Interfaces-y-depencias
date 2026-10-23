@@ -1,24 +1,16 @@
-
+import java.util.ArrayList;
 import java.util.List;
 
 public class TestPreparadorBebidasV2 {
+    public static void main(String[] args) {
+        // Crear una lista con varios equipos distintos
+        List<EquipoCocina> misEquipos = new ArrayList<>();
+        misEquipos.add(new Cafetera());
+        misEquipos.add(new MaquinaTe());
+        misEquipos.add(new Exprimidor());
 
-    private List<EquipoCocina> listaDeEquipos;
-
-    public TestPreparadorBebidasV2(List<EquipoCocina> listaDeEquipos) {
-        this.listaDeEquipos = listaDeEquipos;
-    }
-
-    public void prepararDesayuno() {
-        for (EquipoCocina equipo : listaDeEquipos) {
-            equipo.preparar();
-        }
-    }
-
-    public void apagarTodo() {
-        for (EquipoCocina equipo : listaDeEquipos) {
-            equipo.apagar();
-        }
+        PreparadorBebidasV2 preparadorV2 = new PreparadorBebidasV2(misEquipos);
+        preparadorV2.prepararDesayuno();
+        preparadorV2.apagarTodo();
     }
 }
-
