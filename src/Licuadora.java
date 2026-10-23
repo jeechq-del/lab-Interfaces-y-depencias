@@ -1,4 +1,4 @@
-public class Licuadora implements EquipoCocina{
+public class Licuadora implements EquipoCocina {
     private boolean encendida = false;
     private int velocidad = 1;
 
